@@ -1,7 +1,9 @@
+name: Deploy static content to Pages
 
 on:
   push:
     branches: ["main"]
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -20,9 +22,4 @@ jobs:
           METHOD: sftp
           remote_path: '/site/IS436/lab5/DanielBajulaiye/'
           sftp_only: true
-
-git add .github/workflows/deploy.yml
-git commit -m "Add CI/CD workflow"
-git push origin main
-
 
